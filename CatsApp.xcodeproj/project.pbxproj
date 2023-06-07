@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		581CC1B72A3129780013FE55 /* CatsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CC1B62A3129780013FE55 /* CatsAppApp.swift */; };
-		581CC1B92A3129780013FE55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CC1B82A3129780013FE55 /* ContentView.swift */; };
+		581CC1B92A3129780013FE55 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CC1B82A3129780013FE55 /* MainView.swift */; };
 		581CC1BB2A31297C0013FE55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 581CC1BA2A31297C0013FE55 /* Assets.xcassets */; };
 		581CC1BE2A31297C0013FE55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 581CC1BD2A31297C0013FE55 /* Preview Assets.xcassets */; };
+		581CC1C52A312AB10013FE55 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CC1C42A312AB10013FE55 /* Networking.swift */; };
+		581CC1C72A312D930013FE55 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CC1C62A312D930013FE55 /* ViewModel.swift */; };
+		581CC1C92A312E410013FE55 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CC1C82A312E410013FE55 /* Configuration.swift */; };
+		581CC1CB2A312E630013FE55 /* Configuration+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CC1CA2A312E630013FE55 /* Configuration+Design.swift */; };
+		581CC1CD2A312F100013FE55 /* Configuration+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CC1CC2A312F100013FE55 /* Configuration+Strings.swift */; };
+		581CC1CF2A312F260013FE55 /* Configuration+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CC1CE2A312F260013FE55 /* Configuration+Styles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		581CC1B32A3129780013FE55 /* CatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		581CC1B62A3129780013FE55 /* CatsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAppApp.swift; sourceTree = "<group>"; };
-		581CC1B82A3129780013FE55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		581CC1B82A3129780013FE55 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		581CC1BA2A31297C0013FE55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		581CC1BD2A31297C0013FE55 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		581CC1C42A312AB10013FE55 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		581CC1C62A312D930013FE55 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		581CC1C82A312E410013FE55 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		581CC1CA2A312E630013FE55 /* Configuration+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Configuration+Design.swift"; sourceTree = "<group>"; };
+		581CC1CC2A312F100013FE55 /* Configuration+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Configuration+Strings.swift"; sourceTree = "<group>"; };
+		581CC1CE2A312F260013FE55 /* Configuration+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Configuration+Styles.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +64,12 @@
 			isa = PBXGroup;
 			children = (
 				581CC1B62A3129780013FE55 /* CatsAppApp.swift */,
-				581CC1B82A3129780013FE55 /* ContentView.swift */,
+				581CC1B82A3129780013FE55 /* MainView.swift */,
+				581CC1C42A312AB10013FE55 /* Networking.swift */,
 				581CC1BA2A31297C0013FE55 /* Assets.xcassets */,
 				581CC1BC2A31297C0013FE55 /* Preview Content */,
+				581CC1C62A312D930013FE55 /* ViewModel.swift */,
+				581CC1D02A312F5B0013FE55 /* Configuration */,
 			);
 			path = CatsApp;
 			sourceTree = "<group>";
@@ -65,6 +80,17 @@
 				581CC1BD2A31297C0013FE55 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		581CC1D02A312F5B0013FE55 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				581CC1C82A312E410013FE55 /* Configuration.swift */,
+				581CC1CA2A312E630013FE55 /* Configuration+Design.swift */,
+				581CC1CC2A312F100013FE55 /* Configuration+Strings.swift */,
+				581CC1CE2A312F260013FE55 /* Configuration+Styles.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +163,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				581CC1B92A3129780013FE55 /* ContentView.swift in Sources */,
+				581CC1CB2A312E630013FE55 /* Configuration+Design.swift in Sources */,
+				581CC1C52A312AB10013FE55 /* Networking.swift in Sources */,
+				581CC1C92A312E410013FE55 /* Configuration.swift in Sources */,
+				581CC1B92A3129780013FE55 /* MainView.swift in Sources */,
+				581CC1CF2A312F260013FE55 /* Configuration+Styles.swift in Sources */,
+				581CC1C72A312D930013FE55 /* ViewModel.swift in Sources */,
+				581CC1CD2A312F100013FE55 /* Configuration+Strings.swift in Sources */,
 				581CC1B72A3129780013FE55 /* CatsAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
