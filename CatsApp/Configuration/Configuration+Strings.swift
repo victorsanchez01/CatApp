@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+extension CatsApp {
+    
+    /// CatsApp strings
+    struct Strings {
+        
+    }
+}

@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+extension CatsApp {
+    
+    /// CatsApp design
+    struct Design {
+        
+        public var styles =  Styles()
+        
+    }
+}

@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+extension CatsApp.Design {
+    
+    /// CatsApp styles
+    struct Styles {
+        
+    }
+}
