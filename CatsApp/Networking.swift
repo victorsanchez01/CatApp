@@ -9,11 +9,16 @@ import Foundation
 
 class Networking {
     
+    let apiKey = "bda53789-d59e-46cd-9bc4-2936630fde39"
+    
     func fetchCats(completion: @escaping ([Cat]?) -> Void) {
         guard let url = URL(string: "https://api.thecatapi.com/v1/breeds") else {
             completion(nil)
             return
         }
+        
+        var request = URLRequest(url: url)
+        request.setValue(apiKey, forHTTPHeaderField: "x-api-key")
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             if let error = error {
@@ -41,6 +46,9 @@ class Networking {
             completion(nil)
             return
         }
+        
+        var request = URLRequest(url: url)
+        request.setValue(apiKey, forHTTPHeaderField: "x-api-key")
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             if let error = error {
