@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-class ViewModel {
+class ViewModel: ObservableObject {
     @Published var cats: [Cat] = []
-    let networking = Networking()
+    @Published var imageURLs: [String: URL] = [:]
+    
+    private let networking = Networking()
+    private var configuration = CatsApp.Configuration()
     
     func fetchCats() {
         networking.fetchCats { [weak self] cats in
@@ -19,7 +22,14 @@ class ViewModel {
         }
     }
     
-    func fetchCatImage(for cat: Cat, completion: @escaping (Data?) -> Void) {
-        networking.fetchCatImage(for: cat, completion: completion)
+    func fetchCatImageURL(for cat: Cat) {
+        networking.fetchCatImage(for: cat) { catImageURL in
+            if let catImageURL = catImageURL?.first?.url {
+                DispatchQueue.main.async { [weak self] in
+                    self?.imageURLs[cat.id] = catImageURL
+                    debugPrint("URL: \(catImageURL)")
+                }
+            }
+        }
     }
 }

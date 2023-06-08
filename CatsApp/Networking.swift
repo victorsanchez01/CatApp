@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Networking {
     
@@ -22,7 +23,7 @@ class Networking {
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             if let error = error {
-                print("Error: \(error)")
+                debugPrint("Error: \(error)")
                 completion(nil)
                 return
             }
@@ -32,32 +33,40 @@ class Networking {
                     let cats = try JSONDecoder().decode([Cat].self, from: data)
                     completion(cats)
                 } catch {
-                    print("Error decoding JSON: \(error)")
+                    debugPrint("Error decoding JSON: \(error)")
                     completion(nil)
                 }
             }
         }.resume()
     }
     
-    func fetchCatImage(for cat: Cat, completion: @escaping (Data?) -> Void) {
+    func fetchCatImage(for cat: Cat, completion: @escaping ([CatImage]?) -> Void) {
         let urlString = "https://api.thecatapi.com/v1/images/search?id=\(cat.id)"
-        
+
         guard let url = URL(string: urlString) else {
             completion(nil)
             return
         }
-        
+
         var request = URLRequest(url: url)
         request.setValue(apiKey, forHTTPHeaderField: "x-api-key")
-        
+
         URLSession.shared.dataTask(with: url) { data, _, error in
             if let error = error {
-                print("Error loading image: \(error)")
+                debugPrint("Error: \(error)")
                 completion(nil)
                 return
             }
-            
-            completion(data)
+
+            if let data = data {
+                do {
+                    let catURL = try JSONDecoder().decode([CatImage].self, from: data)
+                    completion(catURL)
+                } catch {
+                    debugPrint("Error decoding JSON: \(error)")
+                    completion(nil)
+                }
+            }
         }.resume()
     }
     

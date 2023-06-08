@@ -19,6 +19,7 @@
 		581CC1CF2A312F260013FE55 /* Configuration+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CC1CE2A312F260013FE55 /* Configuration+Styles.swift */; };
 		581CC1D32A3130670013FE55 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 581CC1D52A3130670013FE55 /* Localizable.strings */; };
 		581CC1DE2A3132BD0013FE55 /* CatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CC1DD2A3132BD0013FE55 /* CatModel.swift */; };
+		581CC1E02A3144AF0013FE55 /* CatImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581CC1DF2A3144AF0013FE55 /* CatImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		581CC1D42A3130670013FE55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		581CC1D62A31306B0013FE55 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		581CC1DD2A3132BD0013FE55 /* CatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatModel.swift; sourceTree = "<group>"; };
+		581CC1DF2A3144AF0013FE55 /* CatImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +73,9 @@
 				581CC1D72A31308A0013FE55 /* Assets */,
 				581CC1B62A3129780013FE55 /* CatsAppApp.swift */,
 				581CC1B82A3129780013FE55 /* MainView.swift */,
+				581CC1C62A312D930013FE55 /* ViewModel.swift */,
 				581CC1C42A312AB10013FE55 /* Networking.swift */,
 				581CC1BC2A31297C0013FE55 /* Preview Content */,
-				581CC1C62A312D930013FE55 /* ViewModel.swift */,
 				581CC1D02A312F5B0013FE55 /* Configuration */,
 				581CC1DA2A3132750013FE55 /* Models */,
 			);
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				581CC1DD2A3132BD0013FE55 /* CatModel.swift */,
+				581CC1DF2A3144AF0013FE55 /* CatImageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				581CC1E02A3144AF0013FE55 /* CatImageModel.swift in Sources */,
 				581CC1CB2A312E630013FE55 /* Configuration+Design.swift in Sources */,
 				581CC1C52A312AB10013FE55 /* Networking.swift in Sources */,
 				581CC1C92A312E410013FE55 /* Configuration.swift in Sources */,
