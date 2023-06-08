@@ -12,6 +12,7 @@ struct Cat: Codable {
     let id: String
     let name: String
     let description: String
+    let origin: String
     let affectionLevel: Int
     let childFriendly: Int
     let energyLevel: Int
@@ -22,6 +23,7 @@ struct Cat: Codable {
         case id
         case name
         case description
+        case origin
         case affectionLevel = "affection_level"
         case childFriendly = "child_friendly"
         case energyLevel = "energy_level"
