@@ -5,3 +5,11 @@
   Created by victor.sanchez on 7/06/23.
   
 */
+
+"navigation.title"                      = "Razas de Gatos";
+"breed.label"                           = "Raza:";
+"origin.label"                          = "Origen:";
+"intelligence.label"                    = "Inteligencia";
+"childFriendly.label"                   = "Amigable con niños";
+"affectionLevel.label"                  = "Nivel de affección";
+"energyLevel.label"                     = "Nivel de energía";
