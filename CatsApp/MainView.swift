@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct MainView: View {
+    @ObservedObject var viewModel = ViewModel()
+    var configuration = CatsApp.Configuration()
+    
     var body: some View {
         NavigationView {
-            VStack(alignment: .center, spacing: 6) {
-                
-            }.navigationTitle("Cat Breeds")
+            List(viewModel.cats, id: \.id) { cat in
+                CardView(cat: cat, viewModel: viewModel)
+            }
+            .navigationTitle(configuration.strings.navigationTitle)
+            .onAppear {
+                viewModel.fetchCats()
+            }
         }
     }
 }
