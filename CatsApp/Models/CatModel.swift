@@ -16,14 +16,16 @@ struct Cat: Codable {
     let childFriendly: Int
     let energyLevel: Int
     let intelligence: Int
+    let imageURL: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
         case name
         case description
-        case affectionLevel
-        case childFriendly
-        case energyLevel
+        case affectionLevel = "affection_level"
+        case childFriendly = "child_friendly"
+        case energyLevel = "energy_level"
         case intelligence
+        case imageURL
     }
 }
